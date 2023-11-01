@@ -5,27 +5,27 @@ namespace Wdelfuego\NovaWizard;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-    
+
 abstract class AbstractWizard
 {
     private $config = [];
     protected $request = null;
-    
-    abstract public function wizardViewData() : array;    
+
+    abstract public function wizardViewData() : array;
     abstract public function onSubmit($formData, &$context) : bool;
     abstract public function successViewData($context) : array;
-    
+
     public function withRequest(Request $request) : self
     {
         $this->request = $request;
         return $this;
     }
-    
+
     public function setConfig(array $config)
     {
         $this->config = $config;
     }
-    
+
     public function submitWizard()
     {
         $errors = [];
@@ -43,11 +43,11 @@ abstract class AbstractWizard
                 $out['success'] = true;
                 return $out;
             }
-            
+
             return $this->wizardViewData();
         }
     }
-    
+
     protected function fields() : array
     {
         $out = [];
@@ -57,7 +57,7 @@ abstract class AbstractWizard
         }
         return $out;
     }
-    
+
     public function validateFormData(Request $request, array &$errors) : bool
     {
         $fields = $this->fields();
@@ -68,14 +68,14 @@ abstract class AbstractWizard
                 $rules[$field->attribute] = $field->rules;
             }
         }
-        
+
         $validator = Validator::make($request->all(), $rules);
         $isValid = !$validator->fails();
 
         if (!$isValid) {
             $errors = $validator->errors();
         }
-        
+
         return $isValid;
     }
 }
