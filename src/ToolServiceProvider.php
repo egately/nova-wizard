@@ -34,9 +34,9 @@ class ToolServiceProvider extends ServiceProvider
      */
     protected function routes()
     {
-        if ($this->app->routesAreCached()) {
+        /*if ($this->app->routesAreCached()) {
             return;
-        }
+        }*/
 
         foreach(config('nova-wizard', []) as $wizardKey => $wizardConfig)
         {

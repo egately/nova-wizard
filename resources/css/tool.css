@@ -24,18 +24,15 @@ ul.step-tabs li {
 }
 
 .nova-wizard label {
-  width: 240px;
+  width: 100%;
   font-size: 13pt;
 }
 
 .nova-wizard .step-container {
-  display: flex;
-  overflow-x: hidden; /* auto for user scrolling */
-  white-space: nowrap; /* Prevents wrapping onto next line */
+  display: block;
 }
 
-.nova-wizard .step-wrapper {
-  flex: 0 0 auto; /* This prevents the items from shrinking */
+.nova-wizard .step-wrapper { /* This prevents the items from shrinking */
   width: 100%; /* Set to desired width */
   white-space: normal; /* Allow the content to wrap inside the step */
   padding: 3rem;

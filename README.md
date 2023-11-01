@@ -18,58 +18,58 @@ Basically, the only condition is that you can't sublicense the package or embed 
     composer require wdelfuego/nova-wizard
     ```
 
-1. Publish the config file;
-    ```sh
-    php artisan vendor:publish --provider="Wdelfuego\NovaWizard\ToolServiceProvider" --tag="config"
-    ```
+   1. Publish the config file;
+       ```sh
+       php artisan vendor:publish --provider="Wdelfuego\NovaWizard\ToolServiceProvider" --tag="config"
+       ```
 
-1. Update the config file (in `config/nova-wizard.php`);
+   2. Update the config file (in `config/nova-wizard.php`);
 
-    The config file allows you to specify as many wizards as you want, each under their own key.
+       The config file allows you to specify as many wizards as you want, each under their own key.
 
-	- Update the class name to whatever class name you want to use for this wizard (we will create the class later)
-    - Update the uri under which the wizard will be available to your end users
-    - Optionally, update the window title for this wizard
+       - Update the class name to whatever class name you want to use for this wizard (we will create the class later)
+       - Update the uri under which the wizard will be available to your end users
+       - Optionally, update the window title for this wizard
 
-    Here's an example minimal config for an `AddUserWizard`:
+       Here's an example minimal config for an `AddUserWizard`:
 
-    ```php
-    use App\Nova\Wizards\AddUserWizard;
+       ```php
+       use App\Nova\Wizards\AddUserWizard;
 
-    return [
-        'add-user' => [
-            'class' => AddUserWizard::class,
-            'uri' => 'wizard/add-user',
-            'windowTitle' => 'Add user'
-        ]
-    ];
-    ```
+       return [
+           'add-user' => [
+               'class' => AddUserWizard::class,
+               'uri' => 'wizard/add-user',
+               'windowTitle' => 'Add user'
+           ]
+       ];
+       ```
 
-	The key used for each entry in the config file is the 'wizard key' (here: `add-user`) and will be required to add the wizard views to your `NovaServiceProvider`.
+       The key used for each entry in the config file is the 'wizard key' (here: `add-user`) and will be required to add the wizard views to your `NovaServiceProvider`.
 
-1. Update your `NovaServiceProvider`;
-	- Add the following statement to the top of the file:
+   3. Update your `NovaServiceProvider`;
+       - Add the following statement to the top of the file:
 
-		`use Wdelfuego\NovaWizard\NovaWizard;`
+           `use Wdelfuego\NovaWizard\NovaWizard;`
 
-	- Add the wizard tool to the array returned by the `tools()` method, supplying the wizard key to its constructor:
+       - Add the wizard tool to the array returned by the `tools()` method, supplying the wizard key to its constructor:
 
-		```php
-		public function tools()
-		{
-			return [
-				new NovaWizard('add-user')
-			];
-		}
-		```
+           ```php
+           public function tools()
+           {
+               return [
+                   new NovaWizard('add-user')
+               ];
+           }
+           ```
 
-	- If you manually specify your application menu in the `boot()` method, add a `MenuSection` or `MenuItem` that links to this wizard.
+       - If you manually specify your application menu in the `boot()` method, add a `MenuSection` or `MenuItem` that links to this wizard.
 
-        Specify the wizard key so the correct URL can be generated, like this:
+           Specify the wizard key so the correct URL can be generated, like this:
 
-		```php
-		MenuItem::link('Add a user', NovaWizard::pathToWizard('add-user'))
-		```
+           ```php
+           MenuItem::link('Add a user', NovaWizard::pathToWizard('add-user'))
+           ```
 
 
 1. Finally, implement the wizard;
@@ -175,46 +175,46 @@ You can use this package under one of the follwing two licenses:
    depending on Nova. You can find the full terms of this license in LICENSE-agpl-3.0.txt 
    in this repository and can also find a copy on https://www.gnu.org/licenses/.
     
-2. A perpetual, non-revocable and 100% free (as in beer) do-what-you-want license 
-   that allows both non-commercial and commercial use, under the following 6 conditions:
+   1. A perpetual, non-revocable and 100% free (as in beer) do-what-you-want license 
+      that allows both non-commercial and commercial use, under the following 6 conditions:
    
-  - You can use this package to implement and/or use as many wizards in as many 
-    applications on as many servers with as many users as you want and charge for 
-    that what you want, as long as you and/or your organization are either
-      a) the developer(s) responsible for implementing the wizard(s), or
-      b) the end user(s) of the implemented wizard(s), or
-      c) both.
+   - You can use this package to implement and/or use as many wizards in as many 
+     applications on as many servers with as many users as you want and charge for 
+     that what you want, as long as you and/or your organization are either
+       a) the developer(s) responsible for implementing the wizard(s), or
+       b) the end user(s) of the implemented wizard(s), or
+       c) both.
     
-  - Sublicensing, relicensing, reselling or charging for the redistribution of this 
-    package (or a modified version of it) to other developers for them to implement 
-    wizard views with is not allowed under this license.
+   - Sublicensing, relicensing, reselling or charging for the redistribution of this 
+     package (or a modified version of it) to other developers for them to implement 
+     wizard views with is not allowed under this license.
     
-  - You are free to make any modifications you want and are not required to make 
-    your modifications public or announce them.
+   - You are free to make any modifications you want and are not required to make 
+     your modifications public or announce them.
     
-  - You are free to make and distribute modified versions of this package publicly 
-    as long as you distribute it for free, as a stand-alone package and under the 
-    same dual licensing model. 
+   - You are free to make and distribute modified versions of this package publicly 
+     as long as you distribute it for free, as a stand-alone package and under the 
+     same dual licensing model. 
     
-  - Embedding this package (or a modified version of it) in free or paid-for software
-    libraries or frameworks that are available to developers not within your 
-    organization is expressly not allowed under this license. If the software library
-    or framework is GPLv3-or-newer compatible, you are free to do so under the 
-    GNU AGPLv3 license.
+   - Embedding this package (or a modified version of it) in free or paid-for software
+     libraries or frameworks that are available to developers not within your 
+     organization is expressly not allowed under this license. If the software library
+     or framework is GPLv3-or-newer compatible, you are free to do so under the 
+     GNU AGPLv3 license.
     
-  - The following 2 disclaimers apply:
+   - The following 2 disclaimers apply:
 
-	  - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-      THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
-      THE SOFTWARE.
+       - THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+       IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+       FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+       THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+       LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
+       THE SOFTWARE.
       
-    - YOU ASSUME ALL RISK ASSOCIATED WITH THE INSTALLATION AND USE OF THE SOFTWARE. 
-      LICENSE HOLDERS ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF 
-      USE AND ASSUME ALL RISKS ASSOCIATED WITH ITS USE, INCLUDING BUT NOT LIMITED TO
-      THE RISKS OF PROGRAM ERRORS, DAMAGE TO EQUIPMENT, LOSS OF DATA OR SOFTWARE 
-      PROGRAMS, OR UNAVAILABILITY OR INTERRUPTION OF OPERATIONS.
+     - YOU ASSUME ALL RISK ASSOCIATED WITH THE INSTALLATION AND USE OF THE SOFTWARE. 
+       LICENSE HOLDERS ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF 
+       USE AND ASSUME ALL RISKS ASSOCIATED WITH ITS USE, INCLUDING BUT NOT LIMITED TO
+       THE RISKS OF PROGRAM ERRORS, DAMAGE TO EQUIPMENT, LOSS OF DATA OR SOFTWARE 
+       PROGRAMS, OR UNAVAILABILITY OR INTERRUPTION OF OPERATIONS.
 

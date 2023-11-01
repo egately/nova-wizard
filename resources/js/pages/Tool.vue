@@ -4,21 +4,18 @@
 
     <Card
       class="flex flex-col items-left"
-      style="min-height: 660px;padding:0;"
+      style="min-height: 660px; padding: 0"
     >
+      <div id="progress-container" class="bg-gray-200 dark:bg-gray-700">
+        <div id="progress-bar"></div>
+      </div>
 
-    <div id="progress-container" class="bg-gray-200 dark:bg-gray-700">
-      <div id="progress-bar"></div>
-    </div>
-
-    <form id="wizardForm" v-if="!finished">
-      <div class="step-container">
-      
+      <form id="wizardForm" v-if="!finished">
+        <div class="step-container">
           <template v-for="(step, index) in steps">
-      
-            <div class="step-wrapper">
+            <div class="step-wrapper" v-show="currentStep == index">
               <h1>{{ step.title }}</h1>
-      
+
               <component
                 class="step-field"
                 v-for="field in step.fields"
@@ -33,53 +30,68 @@
                 :show-help-text="true"
               />
             </div>
-      
           </template>
+        </div>
+      </form>
 
+      <div v-if="!!finished" class="finished">
+        <h1 v-html="finishedMessage"></h1>
       </div>
-    </form>
-
-    <div v-if="!!finished" class="finished">
-      <h1 v-html="finishedMessage"></h1>
-    </div>
-
     </Card>
-    
+
     <div v-if="!finished" class="step-buttons">
-      <DefaultButton v-if="currentStep == steps.length - 1" class="button" align="center" @click="submitButton()">
-        {{ __('Submit') }}
+      <DefaultButton
+        v-if="currentStep == steps.length - 1"
+        class="button"
+        align="center"
+        @click="submitButton()"
+      >
+        {{ __("Submit") }}
       </DefaultButton>
-      
-      <OutlineButton v-if="currentStep < steps.length - 1" class="button" align="center" @click="nextButton()">
-        {{ __('Next') }}
+
+      <OutlineButton
+        v-if="currentStep < steps.length - 1"
+        class="button"
+        align="center"
+        @click="nextButton()"
+      >
+        {{ __("Next") }}
         <Icon class="icon" type="arrow-right" />
       </OutlineButton>
-      
-      <ToolbarButton v-if="currentStep > 0" class="button" align="center" @click="previousButton()">
+
+      <ToolbarButton
+        v-if="currentStep > 0"
+        class="button"
+        align="center"
+        @click="previousButton()"
+      >
         <Icon class="icon" type="arrow-left" />
-        {{ __('Previous') }}
+        {{ __("Previous") }}
       </ToolbarButton>
     </div>
 
     <div v-if="finished" class="reset-button">
-      <OutlineButton v-if="finished" class="button" align="center" @click="resetButton()">
+      <OutlineButton
+        v-if="finished"
+        class="button"
+        align="center"
+        @click="resetButton()"
+      >
         <Icon class="icon" type="refresh" />
-        {{ __('Start over') }}
+        {{ __("Start over") }}
       </OutlineButton>
     </div>
   </div>
 </template>
 
-
 <script>
-import { gsap } from 'gsap';
-import { ref, onMounted } from 'vue';
-import { Errors } from 'form-backend-validation';
+import { gsap } from "gsap";
+import { ref, onMounted } from "vue";
+import { Errors } from "form-backend-validation";
 
 const wizardComponents = ref([]);
 
 export default {
-
   setup() {
     const allWizardFields = ref([]);
     const wizardComponents = ref([]);
@@ -90,18 +102,16 @@ export default {
 
     return { allWizardFields, wizardComponents };
   },
-  
+
   mounted() {
-  
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       this.updateScrollPosition(0);
     });
-  
+
     this.init();
   },
 
   methods: {
-
     init() {
       // if(this.hasStoredSettings()) {
       //   this.restoreSettings();
@@ -109,58 +119,59 @@ export default {
       // }
       // else
       // {
-            this.reload();
+      this.reload();
       // }
     },
-    
+
     reload() {
       this.loading = true;
-      
+
       // Work out the apiPath from the current Tool path, this works
       // because the ToolServiceProvider enforces that both use the same configurable uri part
-      let apiUrl = '/nova-vendor/wdelfuego/nova-wizard' + this.instanceUrl();
-      Nova.request().get(apiUrl)
-        .then(response => { this.reloadFromResponse(response); });
+      let apiUrl = "/nova-vendor/wdelfuego/nova-wizard" + this.instanceUrl();
+      Nova.request()
+        .get(apiUrl)
+        .then((response) => {
+          this.reloadFromResponse(response);
+        });
     },
-    
-    reloadFromResponse(response)
-    {
-        let vue = this;
-        vue.styles = response.data.styles;
-        vue.windowTitle = response.data.windowTitle;
-        vue.title = response.data.title;
-        vue.steps = response.data.steps || [];
-        vue.loading = false;
-        vue.finished = !!response.data.success;
-        if(!!response.data.success) {
-          vue.finishedMessage = response.data.message || '✅';
-        }
-        // this.storeSettings();
+
+    reloadFromResponse(response) {
+      let vue = this;
+      vue.styles = response.data.styles;
+      vue.windowTitle = response.data.windowTitle;
+      vue.title = response.data.title;
+      vue.steps = response.data.steps || [];
+      vue.loading = false;
+      vue.finished = !!response.data.success;
+      if (!!response.data.success) {
+        vue.finishedMessage = response.data.message || "✅";
+      }
+      // this.storeSettings();
     },
-    
+
     instanceUrl() {
-      const url = window.location.pathname.substring(Nova.url('').length);
-      return url.startsWith('/') ? url : '/' + url;
+      const url = window.location.pathname.substring(Nova.url("").length);
+      return url.startsWith("/") ? url : "/" + url;
     },
-    
+
     nextButton() {
-      if(document.getElementById('wizardForm').reportValidity())
-      {
+      if (document.getElementById("wizardForm").reportValidity()) {
         this.currentStep += 1;
         this.updateScrollPosition(0.6);
       }
     },
-    
+
     errorsForField(field) {
       console.log(this.fieldErrors[field.attribute] || {});
       return this.fieldErrors[field.attribute] || {};
     },
-    
+
     previousButton() {
       this.currentStep -= 1;
       this.updateScrollPosition(0.8);
     },
-    
+
     resetButton() {
       this.finished = false;
       this.errors = new Errors();
@@ -168,41 +179,42 @@ export default {
       this.currentStep = 0;
       this.updateScrollPosition(0);
     },
-    
+
     currentStepData() {
       return this.steps[this.currentStep];
     },
-    
-    submitButton() {
-      const wizardForm = document.getElementById('wizardForm');
 
-      if(wizardForm.reportValidity()) {
+    submitButton() {
+      const wizardForm = document.getElementById("wizardForm");
+
+      if (wizardForm.reportValidity()) {
         if (this.allWizardFields.length > 0) {
           const formData = new FormData();
           this.allWizardFields.forEach((fieldComponent) => {
             if (fieldComponent.fill) {
               fieldComponent.fill(formData);
             } else {
-              console.warn('fieldComponent has no fill');
+              console.warn("fieldComponent has no fill");
             }
           });
-          
-          let apiUrl = '/nova-vendor/wdelfuego/nova-wizard' + this.instanceUrl();
-          Nova.request().post(apiUrl, formData)
-            .then(response => { 
-              if(response.status === 200) {
+
+          let apiUrl =
+            "/nova-vendor/wdelfuego/nova-wizard" + this.instanceUrl();
+          Nova.request()
+            .post(apiUrl, formData)
+            .then((response) => {
+              if (response.status === 200) {
                 this.errors = new Errors();
-                this.reloadFromResponse(response); 
+                this.reloadFromResponse(response);
               }
             })
-            .catch(error => {
+            .catch((error) => {
               if (error.response) {
-                if(error.response.status === 500) {
+                if (error.response.status === 500) {
                   // Handle error with status code
-                  console.log('Error status:', error.response.status);
-                  console.log('Error data:', error.response.data);
-                }
-                else if(error.response.status === 422) {
+                  console.log("Error status:", error.response.status);
+                  console.log("Error data:", error.response.data);
+                } else if (error.response.status === 422) {
                   this.errors = new Errors(error.response.data.errors);
                   this.jumpToFirstStepWithError();
                 }
@@ -210,106 +222,108 @@ export default {
                 // console.log('Error data:', error.response.data);
               }
             });
-            
         } else {
-          console.warn('no wizard fields found in form');
+          console.warn("no wizard fields found in form");
         }
       } else {
-        console.warn('wizardForm reports validity false');
+        console.warn("wizardForm reports validity false");
       }
     },
-    
-    focusOnFirstFieldInStep() { 
-        let attribute = this.steps[this.currentStep].fields[0].attribute;
-        if(this.errors.any()) {   
-            let found = false;
-            this.steps[this.currentStep].fields.forEach((field) => {
-                if(!found && this.errors.has(field.attribute)) {   
-                    attribute = field.attribute;
-                    found = true;
-                }
-            });
-        }
-        
-        const divElement = document.querySelector('div[data-attribute="' + attribute + '"]');
-        if(divElement) {
-            const firstInput = divElement.querySelector('input');
-            if (firstInput) {
-              firstInput.focus();
-            }
-        }
-    },
-    
-    jumpToFirstStepWithError() {
-        if(!this.errors.any()) {
-            return;
-        }
-        
-        let targetStep = -1;
-        let stepIndex = 0;
-        this.steps.forEach((step) => {
-            if(targetStep == -1) {
-              step.fields.forEach((field) => {
-                  if(targetStep == -1 && this.errors.has(field.attribute)) {
-                    targetStep = stepIndex;
-                  }
-              });
-            }
-            stepIndex++;
+
+    focusOnFirstFieldInStep() {
+      let attribute = this.steps[this.currentStep].fields[0].attribute;
+      if (this.errors.any()) {
+        let found = false;
+        this.steps[this.currentStep].fields.forEach((field) => {
+          if (!found && this.errors.has(field.attribute)) {
+            attribute = field.attribute;
+            found = true;
+          }
         });
-        
-        if(targetStep > -1) {
-          this.currentStep = targetStep;
-          this.updateScrollPosition(1);
+      }
+
+      const divElement = document.querySelector(
+        'div[data-attribute="' + attribute + '"]'
+      );
+      if (divElement) {
+        const firstInput = divElement.querySelector("input");
+        if (firstInput) {
+          firstInput.focus();
         }
+      }
     },
-    
+
+    jumpToFirstStepWithError() {
+      if (!this.errors.any()) {
+        return;
+      }
+
+      let targetStep = -1;
+      let stepIndex = 0;
+      this.steps.forEach((step) => {
+        if (targetStep == -1) {
+          step.fields.forEach((field) => {
+            if (targetStep == -1 && this.errors.has(field.attribute)) {
+              targetStep = stepIndex;
+            }
+          });
+        }
+        stepIndex++;
+      });
+
+      if (targetStep > -1) {
+        this.currentStep = targetStep;
+        this.updateScrollPosition(1);
+      }
+    },
+
     updateScrollPosition(animate) {
-      const container = document.querySelector('.nova-wizard .step-container');
+      const container = document.querySelector(".nova-wizard");
 
       gsap.to(container, {
-        duration: animate, // Animation duration in seconds
-        scrollLeft: container.clientWidth * this.currentStep,
-        ease: 'power2.out' // Easing function
+        scrollTop: 0, // Scroll to the top (0 pixels from the top)
+        duration: 3, // Animation duration in seconds
+        ease: "power2.out", // Easing function (you can choose a different ease)
       });
-      
-      const progressBar = document.getElementById('progress-bar');
+
+      const progressBar = document.getElementById("progress-bar");
       let percentage = 0;
-      if(this.steps.length > 1) {
-        percentage = this.currentStep / (this.steps.length - 1) * 100;      
+      if (this.steps.length > 1) {
+        percentage = (this.currentStep / (this.steps.length - 1)) * 100;
       }
-      
+
       gsap.to("#progress-bar", {
         duration: animate,
         width: `${percentage}%`,
-        ease: 'power2.out' // Easing function
+        ease: "power2.out", // Easing function
       });
-      
+
       setTimeout(() => {
         this.focusOnFirstFieldInStep();
       }, animate * 1000);
     },
   },
-  
 
-  data () {
-      return {
-          loading: true,
-          currentStep: 0,
-          windowTitle: '',
-          allWizardFields:[],
-          errors: new Errors(),
-          finished: false,
-          finishedMessage: '✅',
-          title: '',
-          steps:[],
-          styles: {
-            default: { color: '#fff', 'background-color': 'rgba(var(--colors-primary-500), 0.9)' }
-          }
-      }
-  }
-  
-}
+  data() {
+    return {
+      loading: true,
+      currentStep: 0,
+      windowTitle: "",
+      allWizardFields: [],
+      errors: new Errors(),
+      finished: false,
+      finishedMessage: "✅",
+      title: "",
+      steps: [],
+      styles: {
+        default: {
+          color: "#fff",
+          "background-color": "rgba(var(--colors-primary-500), 0.9)",
+        },
+      },
+    };
+  },
+};
 </script>
 
 <style>
