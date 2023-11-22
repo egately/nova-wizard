@@ -16,19 +16,38 @@
             <div class="step-wrapper" v-show="currentStep == index">
               <h1>{{ step.title }}</h1>
 
-              <component
-                class="step-field"
+              <div
                 v-for="field in step.fields"
-                :key="field.component + '-' + index"
-                ref="wizardComponents"
-                :is="'form-' + field.component"
-                :data-attribute="field.attribute"
-                :options="field.options"
-                :errors="errors"
-                showErrors="true"
-                :field="field"
-                :show-help-text="true"
-              />
+                :key="field"
+                class="flex flex-col"
+              >
+                <span
+                  v-if="field.status"
+                  v-text="`Status: ${field.status}`"
+                  class="font-bold uppercase"
+                  :class="{
+                    'text-green-500': field.status == 'ACCEPTED',
+                    'text-red-500': field.status == 'REJECTED',
+                    'text-primary-500': (field.status != 'ACCEPTED' && field.status != 'REJECTED') 
+                  }"
+                ></span>
+                <component
+                  class="step-field"
+                  :key="field.component + '-' + index"
+                  ref="wizardComponents"
+                  :is="'form-' + field.component"
+                  :data-attribute="field.attribute"
+                  :options="field.options"
+                  :errors="errors"
+                  showErrors="true"
+                  :field="field"
+                  :show-help-text="true"
+                />
+                <span
+                  class="w-full bg-gray-200 mb-2 mt-2"
+                  style="height: 1px"
+                ></span>
+              </div>
             </div>
           </template>
         </div>
@@ -142,6 +161,7 @@ export default {
       vue.windowTitle = response.data.windowTitle;
       vue.title = response.data.title;
       vue.steps = response.data.steps || [];
+      console.log(vue.steps);
       vue.loading = false;
       vue.finished = !!response.data.success;
       if (!!response.data.success) {
