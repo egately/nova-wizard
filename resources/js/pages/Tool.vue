@@ -28,7 +28,8 @@
                   :class="{
                     'text-green-500': field.status == 'ACCEPTED',
                     'text-red-500': field.status == 'REJECTED',
-                    'text-primary-500': (field.status != 'ACCEPTED' && field.status != 'REJECTED') 
+                    'text-primary-500':
+                      field.status != 'ACCEPTED' && field.status != 'REJECTED',
                   }"
                 ></span>
                 <component
@@ -210,6 +211,18 @@ export default {
       if (wizardForm.reportValidity()) {
         if (this.allWizardFields.length > 0) {
           const formData = new FormData();
+          // Get all file inputs within the form
+          var fileInputs = wizardForm.querySelectorAll('input[type="file"]');
+
+          // Iterate over each file input
+          fileInputs.forEach(function (fileInput) {
+            // Check if the file input has a selected file
+            if (fileInput.files.length > 0) {
+              // Append the file to the FormData object
+              formData.append(fileInput.attributes.dusk.value, fileInput.files[0]);
+            }
+          });
+
           this.allWizardFields.forEach((fieldComponent) => {
             if (fieldComponent.fill) {
               fieldComponent.fill(formData);
@@ -221,7 +234,7 @@ export default {
           let apiUrl =
             "/nova-vendor/wdelfuego/nova-wizard" + this.instanceUrl();
           Nova.request()
-            .post(apiUrl, formData)
+            .post(apiUrl, formData, config)
             .then((response) => {
               if (response.status === 200) {
                 this.errors = new Errors();

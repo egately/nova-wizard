@@ -1,36 +1,36 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/axios/index.js":
-/*!*************************************!*\
-  !*** ./node_modules/axios/index.js ***!
-  \*************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/index.js":
+/*!***********************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/index.js ***!
+  \***********************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
+module.exports = __webpack_require__(/*! ./lib/axios */ "../../../../nova-wizard/node_modules/axios/lib/axios.js");
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/adapters/xhr.js":
-/*!************************************************!*\
-  !*** ./node_modules/axios/lib/adapters/xhr.js ***!
-  \************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/adapters/xhr.js":
+/*!**********************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/adapters/xhr.js ***!
+  \**********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
-var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
-var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
-var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
-var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
-var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
-var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
-var transitionalDefaults = __webpack_require__(/*! ../defaults/transitional */ "./node_modules/axios/lib/defaults/transitional.js");
-var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "./node_modules/axios/lib/core/AxiosError.js");
-var CanceledError = __webpack_require__(/*! ../cancel/CanceledError */ "./node_modules/axios/lib/cancel/CanceledError.js");
-var parseProtocol = __webpack_require__(/*! ../helpers/parseProtocol */ "./node_modules/axios/lib/helpers/parseProtocol.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
+var settle = __webpack_require__(/*! ./../core/settle */ "../../../../nova-wizard/node_modules/axios/lib/core/settle.js");
+var cookies = __webpack_require__(/*! ./../helpers/cookies */ "../../../../nova-wizard/node_modules/axios/lib/helpers/cookies.js");
+var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "../../../../nova-wizard/node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "../../../../nova-wizard/node_modules/axios/lib/core/buildFullPath.js");
+var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "../../../../nova-wizard/node_modules/axios/lib/helpers/parseHeaders.js");
+var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "../../../../nova-wizard/node_modules/axios/lib/helpers/isURLSameOrigin.js");
+var transitionalDefaults = __webpack_require__(/*! ../defaults/transitional */ "../../../../nova-wizard/node_modules/axios/lib/defaults/transitional.js");
+var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js");
+var CanceledError = __webpack_require__(/*! ../cancel/CanceledError */ "../../../../nova-wizard/node_modules/axios/lib/cancel/CanceledError.js");
+var parseProtocol = __webpack_require__(/*! ../helpers/parseProtocol */ "../../../../nova-wizard/node_modules/axios/lib/helpers/parseProtocol.js");
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -244,20 +244,20 @@ module.exports = function xhrAdapter(config) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/axios.js":
-/*!*****************************************!*\
-  !*** ./node_modules/axios/lib/axios.js ***!
-  \*****************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/axios.js":
+/*!***************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/axios.js ***!
+  \***************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
-var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-var Axios = __webpack_require__(/*! ./core/Axios */ "./node_modules/axios/lib/core/Axios.js");
-var mergeConfig = __webpack_require__(/*! ./core/mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
-var defaults = __webpack_require__(/*! ./defaults */ "./node_modules/axios/lib/defaults/index.js");
+var utils = __webpack_require__(/*! ./utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "../../../../nova-wizard/node_modules/axios/lib/helpers/bind.js");
+var Axios = __webpack_require__(/*! ./core/Axios */ "../../../../nova-wizard/node_modules/axios/lib/core/Axios.js");
+var mergeConfig = __webpack_require__(/*! ./core/mergeConfig */ "../../../../nova-wizard/node_modules/axios/lib/core/mergeConfig.js");
+var defaults = __webpack_require__(/*! ./defaults */ "../../../../nova-wizard/node_modules/axios/lib/defaults/index.js");
 
 /**
  * Create an instance of Axios
@@ -290,14 +290,14 @@ var axios = createInstance(defaults);
 axios.Axios = Axios;
 
 // Expose Cancel & CancelToken
-axios.CanceledError = __webpack_require__(/*! ./cancel/CanceledError */ "./node_modules/axios/lib/cancel/CanceledError.js");
-axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "./node_modules/axios/lib/cancel/CancelToken.js");
-axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
-axios.VERSION = (__webpack_require__(/*! ./env/data */ "./node_modules/axios/lib/env/data.js").version);
-axios.toFormData = __webpack_require__(/*! ./helpers/toFormData */ "./node_modules/axios/lib/helpers/toFormData.js");
+axios.CanceledError = __webpack_require__(/*! ./cancel/CanceledError */ "../../../../nova-wizard/node_modules/axios/lib/cancel/CanceledError.js");
+axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "../../../../nova-wizard/node_modules/axios/lib/cancel/CancelToken.js");
+axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "../../../../nova-wizard/node_modules/axios/lib/cancel/isCancel.js");
+axios.VERSION = (__webpack_require__(/*! ./env/data */ "../../../../nova-wizard/node_modules/axios/lib/env/data.js").version);
+axios.toFormData = __webpack_require__(/*! ./helpers/toFormData */ "../../../../nova-wizard/node_modules/axios/lib/helpers/toFormData.js");
 
 // Expose AxiosError class
-axios.AxiosError = __webpack_require__(/*! ../lib/core/AxiosError */ "./node_modules/axios/lib/core/AxiosError.js");
+axios.AxiosError = __webpack_require__(/*! ../lib/core/AxiosError */ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js");
 
 // alias for CanceledError for backward compatibility
 axios.Cancel = axios.CanceledError;
@@ -306,10 +306,10 @@ axios.Cancel = axios.CanceledError;
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
+axios.spread = __webpack_require__(/*! ./helpers/spread */ "../../../../nova-wizard/node_modules/axios/lib/helpers/spread.js");
 
 // Expose isAxiosError
-axios.isAxiosError = __webpack_require__(/*! ./helpers/isAxiosError */ "./node_modules/axios/lib/helpers/isAxiosError.js");
+axios.isAxiosError = __webpack_require__(/*! ./helpers/isAxiosError */ "../../../../nova-wizard/node_modules/axios/lib/helpers/isAxiosError.js");
 
 module.exports = axios;
 
@@ -319,16 +319,16 @@ module.exports["default"] = axios;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/cancel/CancelToken.js":
-/*!******************************************************!*\
-  !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
-  \******************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/cancel/CancelToken.js":
+/*!****************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/cancel/CancelToken.js ***!
+  \****************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var CanceledError = __webpack_require__(/*! ./CanceledError */ "./node_modules/axios/lib/cancel/CanceledError.js");
+var CanceledError = __webpack_require__(/*! ./CanceledError */ "../../../../nova-wizard/node_modules/axios/lib/cancel/CanceledError.js");
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -449,17 +449,17 @@ module.exports = CancelToken;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/cancel/CanceledError.js":
-/*!********************************************************!*\
-  !*** ./node_modules/axios/lib/cancel/CanceledError.js ***!
-  \********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/cancel/CanceledError.js":
+/*!******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/cancel/CanceledError.js ***!
+  \******************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "./node_modules/axios/lib/core/AxiosError.js");
-var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js");
+var utils = __webpack_require__(/*! ../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 /**
  * A `CanceledError` is an object that is thrown when an operation is canceled.
@@ -482,10 +482,10 @@ module.exports = CanceledError;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/cancel/isCancel.js":
-/*!***************************************************!*\
-  !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
-  \***************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/cancel/isCancel.js":
+/*!*************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/cancel/isCancel.js ***!
+  \*************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -498,22 +498,22 @@ module.exports = function isCancel(value) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/Axios.js":
-/*!**********************************************!*\
-  !*** ./node_modules/axios/lib/core/Axios.js ***!
-  \**********************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/Axios.js":
+/*!********************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/Axios.js ***!
+  \********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
-var buildURL = __webpack_require__(/*! ../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
-var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "./node_modules/axios/lib/core/InterceptorManager.js");
-var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "./node_modules/axios/lib/core/dispatchRequest.js");
-var mergeConfig = __webpack_require__(/*! ./mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
-var buildFullPath = __webpack_require__(/*! ./buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
-var validator = __webpack_require__(/*! ../helpers/validator */ "./node_modules/axios/lib/helpers/validator.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
+var buildURL = __webpack_require__(/*! ../helpers/buildURL */ "../../../../nova-wizard/node_modules/axios/lib/helpers/buildURL.js");
+var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "../../../../nova-wizard/node_modules/axios/lib/core/InterceptorManager.js");
+var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "../../../../nova-wizard/node_modules/axios/lib/core/dispatchRequest.js");
+var mergeConfig = __webpack_require__(/*! ./mergeConfig */ "../../../../nova-wizard/node_modules/axios/lib/core/mergeConfig.js");
+var buildFullPath = __webpack_require__(/*! ./buildFullPath */ "../../../../nova-wizard/node_modules/axios/lib/core/buildFullPath.js");
+var validator = __webpack_require__(/*! ../helpers/validator */ "../../../../nova-wizard/node_modules/axios/lib/helpers/validator.js");
 
 var validators = validator.validators;
 /**
@@ -669,16 +669,16 @@ module.exports = Axios;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/AxiosError.js":
-/*!***************************************************!*\
-  !*** ./node_modules/axios/lib/core/AxiosError.js ***!
-  \***************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js":
+/*!*************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js ***!
+  \*************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -766,16 +766,16 @@ module.exports = AxiosError;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/InterceptorManager.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
-  \***********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/InterceptorManager.js":
+/*!*********************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/InterceptorManager.js ***!
+  \*********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 function InterceptorManager() {
   this.handlers = [];
@@ -831,17 +831,17 @@ module.exports = InterceptorManager;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/buildFullPath.js":
-/*!******************************************************!*\
-  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
-  \******************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/buildFullPath.js":
+/*!****************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/buildFullPath.js ***!
+  \****************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
-var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "../../../../nova-wizard/node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "../../../../nova-wizard/node_modules/axios/lib/helpers/combineURLs.js");
 
 /**
  * Creates a new URL by combining the baseURL with the requestedURL,
@@ -862,20 +862,20 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/dispatchRequest.js":
-/*!********************************************************!*\
-  !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
-  \********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/dispatchRequest.js":
+/*!******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/dispatchRequest.js ***!
+  \******************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
-var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
-var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
-var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults/index.js");
-var CanceledError = __webpack_require__(/*! ../cancel/CanceledError */ "./node_modules/axios/lib/cancel/CanceledError.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
+var transformData = __webpack_require__(/*! ./transformData */ "../../../../nova-wizard/node_modules/axios/lib/core/transformData.js");
+var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "../../../../nova-wizard/node_modules/axios/lib/cancel/isCancel.js");
+var defaults = __webpack_require__(/*! ../defaults */ "../../../../nova-wizard/node_modules/axios/lib/defaults/index.js");
+var CanceledError = __webpack_require__(/*! ../cancel/CanceledError */ "../../../../nova-wizard/node_modules/axios/lib/cancel/CanceledError.js");
 
 /**
  * Throws a `CanceledError` if cancellation has been requested.
@@ -960,16 +960,16 @@ module.exports = function dispatchRequest(config) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/mergeConfig.js":
-/*!****************************************************!*\
-  !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
-  \****************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/mergeConfig.js":
+/*!**************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/mergeConfig.js ***!
+  \**************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 /**
  * Config-specific merge-function which creates a new config-object
@@ -1071,16 +1071,16 @@ module.exports = function mergeConfig(config1, config2) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/settle.js":
-/*!***********************************************!*\
-  !*** ./node_modules/axios/lib/core/settle.js ***!
-  \***********************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/settle.js":
+/*!*********************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/settle.js ***!
+  \*********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var AxiosError = __webpack_require__(/*! ./AxiosError */ "./node_modules/axios/lib/core/AxiosError.js");
+var AxiosError = __webpack_require__(/*! ./AxiosError */ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js");
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -1107,17 +1107,17 @@ module.exports = function settle(resolve, reject, response) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/core/transformData.js":
-/*!******************************************************!*\
-  !*** ./node_modules/axios/lib/core/transformData.js ***!
-  \******************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/core/transformData.js":
+/*!****************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/core/transformData.js ***!
+  \****************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
-var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults/index.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
+var defaults = __webpack_require__(/*! ../defaults */ "../../../../nova-wizard/node_modules/axios/lib/defaults/index.js");
 
 /**
  * Transform the data for a request or a response
@@ -1140,21 +1140,21 @@ module.exports = function transformData(data, headers, fns) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/defaults/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/axios/lib/defaults/index.js ***!
-  \**************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/defaults/index.js":
+/*!************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/defaults/index.js ***!
+  \************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "../../../../nova-wizard/node_modules/process/browser.js");
 
 
-var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
-var normalizeHeaderName = __webpack_require__(/*! ../helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
-var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "./node_modules/axios/lib/core/AxiosError.js");
-var transitionalDefaults = __webpack_require__(/*! ./transitional */ "./node_modules/axios/lib/defaults/transitional.js");
-var toFormData = __webpack_require__(/*! ../helpers/toFormData */ "./node_modules/axios/lib/helpers/toFormData.js");
+var utils = __webpack_require__(/*! ../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
+var normalizeHeaderName = __webpack_require__(/*! ../helpers/normalizeHeaderName */ "../../../../nova-wizard/node_modules/axios/lib/helpers/normalizeHeaderName.js");
+var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js");
+var transitionalDefaults = __webpack_require__(/*! ./transitional */ "../../../../nova-wizard/node_modules/axios/lib/defaults/transitional.js");
+var toFormData = __webpack_require__(/*! ../helpers/toFormData */ "../../../../nova-wizard/node_modules/axios/lib/helpers/toFormData.js");
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -1170,10 +1170,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(/*! ../adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+    adapter = __webpack_require__(/*! ../adapters/xhr */ "../../../../nova-wizard/node_modules/axios/lib/adapters/xhr.js");
   } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(/*! ../adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
+    adapter = __webpack_require__(/*! ../adapters/http */ "../../../../nova-wizard/node_modules/axios/lib/adapters/xhr.js");
   }
   return adapter;
 }
@@ -1271,7 +1271,7 @@ var defaults = {
   maxBodyLength: -1,
 
   env: {
-    FormData: __webpack_require__(/*! ./env/FormData */ "./node_modules/axios/lib/helpers/null.js")
+    FormData: __webpack_require__(/*! ./env/FormData */ "../../../../nova-wizard/node_modules/axios/lib/helpers/null.js")
   },
 
   validateStatus: function validateStatus(status) {
@@ -1298,10 +1298,10 @@ module.exports = defaults;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/defaults/transitional.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/axios/lib/defaults/transitional.js ***!
-  \*********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/defaults/transitional.js":
+/*!*******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/defaults/transitional.js ***!
+  \*******************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1316,10 +1316,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/env/data.js":
-/*!********************************************!*\
-  !*** ./node_modules/axios/lib/env/data.js ***!
-  \********************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/env/data.js":
+/*!******************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/env/data.js ***!
+  \******************************************************************/
 /***/ ((module) => {
 
 module.exports = {
@@ -1328,10 +1328,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/bind.js":
-/*!************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/bind.js ***!
-  \************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/bind.js":
+/*!**********************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/bind.js ***!
+  \**********************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1350,16 +1350,16 @@ module.exports = function bind(fn, thisArg) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/buildURL.js":
-/*!****************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
-  \****************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/buildURL.js":
+/*!**************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/buildURL.js ***!
+  \**************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -1431,10 +1431,10 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/combineURLs.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
-  \*******************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/combineURLs.js":
+/*!*****************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/combineURLs.js ***!
+  \*****************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1456,16 +1456,16 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/cookies.js":
-/*!***************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/cookies.js ***!
-  \***************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/cookies.js":
+/*!*************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/cookies.js ***!
+  \*************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -1520,10 +1520,10 @@ module.exports = (
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/isAbsoluteURL.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
-  \*********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/isAbsoluteURL.js":
+/*!*******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
+  \*******************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1545,16 +1545,16 @@ module.exports = function isAbsoluteURL(url) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/isAxiosError.js":
-/*!********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isAxiosError.js ***!
-  \********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/isAxiosError.js":
+/*!******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/isAxiosError.js ***!
+  \******************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 /**
  * Determines whether the payload is an error thrown by Axios
@@ -1569,16 +1569,16 @@ module.exports = function isAxiosError(payload) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
-  \***********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/isURLSameOrigin.js":
+/*!*********************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
+  \*********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -1648,16 +1648,16 @@ module.exports = (
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/normalizeHeaderName.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
-  \***************************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/normalizeHeaderName.js":
+/*!*************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  \*************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 module.exports = function normalizeHeaderName(headers, normalizedName) {
   utils.forEach(headers, function processHeader(value, name) {
@@ -1671,10 +1671,10 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/null.js":
-/*!************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/null.js ***!
-  \************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/null.js":
+/*!**********************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/null.js ***!
+  \**********************************************************************/
 /***/ ((module) => {
 
 // eslint-disable-next-line strict
@@ -1683,16 +1683,16 @@ module.exports = null;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/parseHeaders.js":
-/*!********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
-  \********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/parseHeaders.js":
+/*!******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/parseHeaders.js ***!
+  \******************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 // Headers whose duplicates are ignored by node
 // c.f. https://nodejs.org/api/http.html#http_message_headers
@@ -1747,10 +1747,10 @@ module.exports = function parseHeaders(headers) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/parseProtocol.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/parseProtocol.js ***!
-  \*********************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/parseProtocol.js":
+/*!*******************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/parseProtocol.js ***!
+  \*******************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1764,10 +1764,10 @@ module.exports = function parseProtocol(url) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/spread.js":
-/*!**************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/spread.js ***!
-  \**************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/spread.js":
+/*!************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/spread.js ***!
+  \************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1802,17 +1802,17 @@ module.exports = function spread(callback) {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/toFormData.js":
-/*!******************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/toFormData.js ***!
-  \******************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/toFormData.js":
+/*!****************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/toFormData.js ***!
+  \****************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js")["Buffer"];
+/* provided dependency */ var Buffer = __webpack_require__(/*! buffer */ "../../../../nova-wizard/node_modules/buffer/index.js")["Buffer"];
 
 
-var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ../utils */ "../../../../nova-wizard/node_modules/axios/lib/utils.js");
 
 /**
  * Convert a data object to FormData
@@ -1886,17 +1886,17 @@ module.exports = toFormData;
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/helpers/validator.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/validator.js ***!
-  \*****************************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/helpers/validator.js":
+/*!***************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/helpers/validator.js ***!
+  \***************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var VERSION = (__webpack_require__(/*! ../env/data */ "./node_modules/axios/lib/env/data.js").version);
-var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "./node_modules/axios/lib/core/AxiosError.js");
+var VERSION = (__webpack_require__(/*! ../env/data */ "../../../../nova-wizard/node_modules/axios/lib/env/data.js").version);
+var AxiosError = __webpack_require__(/*! ../core/AxiosError */ "../../../../nova-wizard/node_modules/axios/lib/core/AxiosError.js");
 
 var validators = {};
 
@@ -1983,16 +1983,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/axios/lib/utils.js":
-/*!*****************************************!*\
-  !*** ./node_modules/axios/lib/utils.js ***!
-  \*****************************************/
+/***/ "../../../../nova-wizard/node_modules/axios/lib/utils.js":
+/*!***************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/axios/lib/utils.js ***!
+  \***************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 
-var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "../../../../nova-wizard/node_modules/axios/lib/helpers/bind.js");
 
 // utils is a library of generic helper functions non-specific to axios
 
@@ -2464,10 +2464,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=script&lang=js":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=script&lang=js ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "../../../../nova-wizard/node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=script&lang=js":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2475,10 +2475,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "../../../../nova-wizard/node_modules/gsap/index.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "vue");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var form_backend_validation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! form-backend-validation */ "./node_modules/form-backend-validation/dist/index.js");
+/* harmony import */ var form_backend_validation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! form-backend-validation */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/index.js");
 
 
 
@@ -2572,6 +2572,17 @@ var wizardComponents = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
       if (wizardForm.reportValidity()) {
         if (this.allWizardFields.length > 0) {
           var formData = new FormData();
+          // Get all file inputs within the form
+          var fileInputs = wizardForm.querySelectorAll('input[type="file"]');
+
+          // Iterate over each file input
+          fileInputs.forEach(function (fileInput) {
+            // Check if the file input has a selected file
+            if (fileInput.files.length > 0) {
+              // Append the file to the FormData object
+              formData.append(fileInput.attributes.dusk.value, fileInput.files[0]);
+            }
+          });
           this.allWizardFields.forEach(function (fieldComponent) {
             if (fieldComponent.fill) {
               fieldComponent.fill(formData);
@@ -2580,7 +2591,7 @@ var wizardComponents = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
             }
           });
           var apiUrl = "/nova-vendor/wdelfuego/nova-wizard" + this.instanceUrl();
-          Nova.request().post(apiUrl, formData).then(function (response) {
+          Nova.request().post(apiUrl, formData, config).then(function (response) {
             if (response.status === 200) {
               _this3.errors = new form_backend_validation__WEBPACK_IMPORTED_MODULE_1__.Errors();
               _this3.reloadFromResponse(response);
@@ -2698,10 +2709,10 @@ var wizardComponents = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=template&id=ef10eebe":
-/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=template&id=ef10eebe ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../../../nova-wizard/node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../nova-wizard/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=template&id=788a7f84":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../nova-wizard/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=template&id=788a7f84 ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2865,26 +2876,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./resources/js/tool.js":
-/*!******************************!*\
-  !*** ./resources/js/tool.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _pages_Tool__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Tool */ "./resources/js/pages/Tool.vue");
-
-Nova.booting(function (app, store) {
-  Nova.inertia('NovaWizard', _pages_Tool__WEBPACK_IMPORTED_MODULE_0__["default"]);
-});
-
-/***/ }),
-
-/***/ "./node_modules/base64-js/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/base64-js/index.js ***!
-  \*****************************************/
+/***/ "../../../../nova-wizard/node_modules/base64-js/index.js":
+/*!***************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/base64-js/index.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3042,10 +3037,10 @@ function fromByteArray (uint8) {
 
 /***/ }),
 
-/***/ "./node_modules/buffer/index.js":
-/*!**************************************!*\
-  !*** ./node_modules/buffer/index.js ***!
-  \**************************************/
+/***/ "../../../../nova-wizard/node_modules/buffer/index.js":
+/*!************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/buffer/index.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -3059,9 +3054,9 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(/*! base64-js */ "./node_modules/base64-js/index.js")
-var ieee754 = __webpack_require__(/*! ieee754 */ "./node_modules/ieee754/index.js")
-var isArray = __webpack_require__(/*! isarray */ "./node_modules/isarray/index.js")
+var base64 = __webpack_require__(/*! base64-js */ "../../../../nova-wizard/node_modules/base64-js/index.js")
+var ieee754 = __webpack_require__(/*! ieee754 */ "../../../../nova-wizard/node_modules/ieee754/index.js")
+var isArray = __webpack_require__(/*! isarray */ "../../../../nova-wizard/node_modules/isarray/index.js")
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -4842,10 +4837,10 @@ function isnan (val) {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/resources/css/tool.css":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/resources/css/tool.css ***!
+  \**********************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4853,23 +4848,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../../../../nova-wizard/node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* Scoped Styles */\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Nova Tool CSS */\r\nul.step-tabs li {\r\n  display: inline-block;\r\n}\r\n\r\n.nova-wizard .step-buttons {\r\n  border: 0px #fff dashed;\r\n  text-align:right;\r\n  padding: 1rem;\r\n  padding-right: 0;\r\n}\r\n\r\n.nova-wizard .button {\r\n  float:right;\r\n  width: 14rem;\r\n  height: 4rem;\r\n  margin: 1rem;\r\n  margin-right: 0;\r\n  font-size: 13pt;\r\n}\r\n\r\n.nova-wizard .icon {\r\n  margin: 1rem;\r\n}\r\n\r\n.nova-wizard label {\r\n  width: 100%;\r\n  font-size: 13pt;\r\n}\r\n\r\n.nova-wizard .step-container {\r\n  display: block;\r\n}\r\n\r\n.nova-wizard .step-wrapper { /* This prevents the items from shrinking */\r\n  width: 100%; /* Set to desired width */\r\n  white-space: normal; /* Allow the content to wrap inside the step */\r\n  padding: 3rem;\r\n  padding-top: 4rem;\r\n}\r\n\r\n.nova-wizard .step-wrapper h1 {\r\n  font-size: 18pt;\r\n  margin-bottom: 3rem;\r\n}\r\n\r\n\r\n.nova-wizard #progress-container {\r\n  margin-top: -1px;\r\n  width: 100%;\r\n  height: 5px;\r\n  border-radius: 4px;\r\n}\r\n\r\n.nova-wizard #progress-bar {\r\n  width: 0;\r\n  height: 100%;\r\n  background-color: rgba(var(--colors-primary-500), 0.8);\r\n  border-radius: 4px;\r\n}\r\n\r\n.nova-wizard.finished #progress-bar {\r\n  background-color: rgba(var(--colors-green-500), 0.4);\r\n}\r\n\r\n.nova-wizard.finished div.finished {\r\n  padding: 6rem;\r\n  padding-top: 10rem;\r\n  text-align: center;\r\n  font-size: 22pt;\r\n}\r\n\r\n.nova-wizard .reset-button {\r\n  text-align: center;\r\n}\r\n\r\n.nova-wizard .reset-button .button {\r\n  float: none;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
+/***/ "../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/vue-loader/dist/stylePostLoader.js!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/vue-loader/dist/stylePostLoader.js!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../../../nova-wizard/node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n/* Scoped Styles */\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "../../../../nova-wizard/node_modules/css-loader/dist/runtime/api.js":
+/*!***************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/css-loader/dist/runtime/api.js ***!
+  \***************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -4942,10 +4961,10 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/Errors.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/Errors.js ***!
-  \*************************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/Errors.js":
+/*!***********************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/Errors.js ***!
+  \***********************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5091,10 +5110,10 @@ exports["default"] = Errors;
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/Form.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/Form.js ***!
-  \***********************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/Form.js":
+/*!*********************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/Form.js ***!
+  \*********************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -5108,11 +5127,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Errors = __webpack_require__(/*! ./Errors */ "./node_modules/form-backend-validation/dist/Errors.js");
+var _Errors = __webpack_require__(/*! ./Errors */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/Errors.js");
 
 var _Errors2 = _interopRequireDefault(_Errors);
 
-var _util = __webpack_require__(/*! ./util */ "./node_modules/form-backend-validation/dist/util/index.js");
+var _util = __webpack_require__(/*! ./util */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/index.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5191,7 +5210,7 @@ var Form = function () {
 
             var windowAxios = typeof window === 'undefined' ? false : window.axios;
 
-            this.__http = options.http || windowAxios || __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+            this.__http = options.http || windowAxios || __webpack_require__(/*! axios */ "../../../../nova-wizard/node_modules/axios/index.js");
 
             if (!this.__http) {
                 throw new Error('No http library provided. Either pass an http option, or install axios.');
@@ -5505,10 +5524,10 @@ exports["default"] = Form;
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/index.js ***!
-  \************************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/index.js":
+/*!**********************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/index.js ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -5518,7 +5537,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var _Form = __webpack_require__(/*! ./Form */ "./node_modules/form-backend-validation/dist/Form.js");
+var _Form = __webpack_require__(/*! ./Form */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/Form.js");
 
 Object.defineProperty(exports, "default", ({
   enumerable: true,
@@ -5533,7 +5552,7 @@ Object.defineProperty(exports, "Form", ({
   }
 }));
 
-var _Errors = __webpack_require__(/*! ./Errors */ "./node_modules/form-backend-validation/dist/Errors.js");
+var _Errors = __webpack_require__(/*! ./Errors */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/Errors.js");
 
 Object.defineProperty(exports, "Errors", ({
   enumerable: true,
@@ -5546,10 +5565,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/util/fieldNameValidation.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/util/fieldNameValidation.js ***!
-  \*******************************************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/fieldNameValidation.js":
+/*!*****************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/util/fieldNameValidation.js ***!
+  \*****************************************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5569,10 +5588,10 @@ function guardAgainstReservedFieldName(fieldName) {
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/util/formData.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/util/formData.js ***!
-  \********************************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/formData.js":
+/*!******************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/util/formData.js ***!
+  \******************************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5632,10 +5651,10 @@ function appendToFormData(formData, key, value) {
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/util/index.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/util/index.js ***!
-  \*****************************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/index.js":
+/*!***************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/util/index.js ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -5645,7 +5664,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var _objects = __webpack_require__(/*! ./objects */ "./node_modules/form-backend-validation/dist/util/objects.js");
+var _objects = __webpack_require__(/*! ./objects */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/objects.js");
 
 Object.keys(_objects).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -5657,7 +5676,7 @@ Object.keys(_objects).forEach(function (key) {
   });
 });
 
-var _formData = __webpack_require__(/*! ./formData */ "./node_modules/form-backend-validation/dist/util/formData.js");
+var _formData = __webpack_require__(/*! ./formData */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/formData.js");
 
 Object.keys(_formData).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -5669,7 +5688,7 @@ Object.keys(_formData).forEach(function (key) {
   });
 });
 
-var _fieldNameValidation = __webpack_require__(/*! ./fieldNameValidation */ "./node_modules/form-backend-validation/dist/util/fieldNameValidation.js");
+var _fieldNameValidation = __webpack_require__(/*! ./fieldNameValidation */ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/fieldNameValidation.js");
 
 Object.keys(_fieldNameValidation).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -5683,10 +5702,10 @@ Object.keys(_fieldNameValidation).forEach(function (key) {
 
 /***/ }),
 
-/***/ "./node_modules/form-backend-validation/dist/util/objects.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/form-backend-validation/dist/util/objects.js ***!
-  \*******************************************************************/
+/***/ "../../../../nova-wizard/node_modules/form-backend-validation/dist/util/objects.js":
+/*!*****************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/form-backend-validation/dist/util/objects.js ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -5754,10 +5773,10 @@ function cloneDeep(object) {
 
 /***/ }),
 
-/***/ "./node_modules/gsap/CSSPlugin.js":
-/*!****************************************!*\
-  !*** ./node_modules/gsap/CSSPlugin.js ***!
-  \****************************************/
+/***/ "../../../../nova-wizard/node_modules/gsap/CSSPlugin.js":
+/*!**************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/gsap/CSSPlugin.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5769,7 +5788,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   checkPrefix: () => (/* binding */ _checkPropPrefix),
 /* harmony export */   "default": () => (/* binding */ CSSPlugin)
 /* harmony export */ });
-/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "./node_modules/gsap/gsap-core.js");
+/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "../../../../nova-wizard/node_modules/gsap/gsap-core.js");
 /*!
  * CSSPlugin 3.12.2
  * https://greensock.com
@@ -7324,10 +7343,10 @@ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(CSSPlugin);
 
 /***/ }),
 
-/***/ "./node_modules/gsap/gsap-core.js":
-/*!****************************************!*\
-  !*** ./node_modules/gsap/gsap-core.js ***!
-  \****************************************/
+/***/ "../../../../nova-wizard/node_modules/gsap/gsap-core.js":
+/*!**************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/gsap/gsap-core.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11867,10 +11886,10 @@ var Power0 = _easeMap.Power0,
 
 /***/ }),
 
-/***/ "./node_modules/gsap/index.js":
-/*!************************************!*\
-  !*** ./node_modules/gsap/index.js ***!
-  \************************************/
+/***/ "../../../../nova-wizard/node_modules/gsap/index.js":
+/*!**********************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/gsap/index.js ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11902,8 +11921,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ gsapWithCSS),
 /* harmony export */   gsap: () => (/* binding */ gsapWithCSS)
 /* harmony export */ });
-/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "./node_modules/gsap/gsap-core.js");
-/* harmony import */ var _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CSSPlugin.js */ "./node_modules/gsap/CSSPlugin.js");
+/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "../../../../nova-wizard/node_modules/gsap/gsap-core.js");
+/* harmony import */ var _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CSSPlugin.js */ "../../../../nova-wizard/node_modules/gsap/CSSPlugin.js");
 
 
 var gsapWithCSS = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(_CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__.CSSPlugin) || _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap,
@@ -11913,10 +11932,10 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 /***/ }),
 
-/***/ "./node_modules/ieee754/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/ieee754/index.js ***!
-  \***************************************/
+/***/ "../../../../nova-wizard/node_modules/ieee754/index.js":
+/*!*************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/ieee754/index.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
@@ -12008,10 +12027,10 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 /***/ }),
 
-/***/ "./node_modules/isarray/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/isarray/index.js ***!
-  \***************************************/
+/***/ "../../../../nova-wizard/node_modules/isarray/index.js":
+/*!*************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/isarray/index.js ***!
+  \*************************************************************/
 /***/ ((module) => {
 
 var toString = {}.toString;
@@ -12023,23 +12042,10 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 
-/***/ "./resources/css/tool.css":
-/*!********************************!*\
-  !*** ./resources/css/tool.css ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./node_modules/process/browser.js":
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
+/***/ "../../../../nova-wizard/node_modules/process/browser.js":
+/*!***************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/process/browser.js ***!
+  \***************************************************************/
 /***/ ((module) => {
 
 // shim for using process in browser
@@ -12230,10 +12236,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../../../nova-wizard/node_modules/style-loader/dist/cjs.js!../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/vue-loader/dist/stylePostLoader.js!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/style-loader/dist/cjs.js!../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/vue-loader/dist/stylePostLoader.js!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12241,9 +12247,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../../../nova-wizard/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_ef10eebe_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_788a7f84_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css */ "../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/vue-loader/dist/stylePostLoader.js!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css");
 
             
 
@@ -12252,18 +12258,18 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_ef10eebe_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_788a7f84_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_ef10eebe_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_788a7f84_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
+/***/ "../../../../nova-wizard/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!**************************************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \**************************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -12539,10 +12545,10 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/dist/exportHelper.js":
-/*!******************************************************!*\
-  !*** ./node_modules/vue-loader/dist/exportHelper.js ***!
-  \******************************************************/
+/***/ "../../../../nova-wizard/node_modules/vue-loader/dist/exportHelper.js":
+/*!****************************************************************************!*\
+  !*** ../../../../nova-wizard/node_modules/vue-loader/dist/exportHelper.js ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -12561,10 +12567,10 @@ exports["default"] = (sfc, props) => {
 
 /***/ }),
 
-/***/ "./resources/js/pages/Tool.vue":
-/*!*************************************!*\
-  !*** ./resources/js/pages/Tool.vue ***!
-  \*************************************/
+/***/ "../../../../nova-wizard/resources/js/pages/Tool.vue":
+/*!***********************************************************!*\
+  !*** ../../../../nova-wizard/resources/js/pages/Tool.vue ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12572,10 +12578,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Tool_vue_vue_type_template_id_ef10eebe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tool.vue?vue&type=template&id=ef10eebe */ "./resources/js/pages/Tool.vue?vue&type=template&id=ef10eebe");
-/* harmony import */ var _Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tool.vue?vue&type=script&lang=js */ "./resources/js/pages/Tool.vue?vue&type=script&lang=js");
-/* harmony import */ var _Tool_vue_vue_type_style_index_0_id_ef10eebe_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css */ "./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css");
-/* harmony import */ var C_Users_marwan_Documents_GitHub_nova_wizard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Tool_vue_vue_type_template_id_788a7f84__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tool.vue?vue&type=template&id=788a7f84 */ "../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=template&id=788a7f84");
+/* harmony import */ var _Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tool.vue?vue&type=script&lang=js */ "../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=script&lang=js");
+/* harmony import */ var _Tool_vue_vue_type_style_index_0_id_788a7f84_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css */ "../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css");
+/* harmony import */ var C_Users_marwan_Documents_GitHub_nova_wizard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../nova-wizard/node_modules/vue-loader/dist/exportHelper.js */ "../../../../nova-wizard/node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -12583,7 +12589,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,C_Users_marwan_Documents_GitHub_nova_wizard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Tool_vue_vue_type_template_id_ef10eebe__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/pages/Tool.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_marwan_Documents_GitHub_nova_wizard_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Tool_vue_vue_type_template_id_788a7f84__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"nova-wizard/resources/js/pages/Tool.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -12592,10 +12598,10 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/pages/Tool.vue?vue&type=script&lang=js":
-/*!*************************************************************!*\
-  !*** ./resources/js/pages/Tool.vue?vue&type=script&lang=js ***!
-  \*************************************************************/
+/***/ "../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=script&lang=js":
+/*!***********************************************************************************!*\
+  !*** ../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=script&lang=js ***!
+  \***********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12603,36 +12609,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=script&lang=js");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=script&lang=js */ "../../../../nova-wizard/node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=script&lang=js");
  
 
 /***/ }),
 
-/***/ "./resources/js/pages/Tool.vue?vue&type=template&id=ef10eebe":
-/*!*******************************************************************!*\
-  !*** ./resources/js/pages/Tool.vue?vue&type=template&id=ef10eebe ***!
-  \*******************************************************************/
+/***/ "../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=template&id=788a7f84":
+/*!*****************************************************************************************!*\
+  !*** ../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=template&id=788a7f84 ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_template_id_ef10eebe__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_template_id_788a7f84__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_template_id_ef10eebe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=template&id=ef10eebe */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=template&id=ef10eebe");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_template_id_788a7f84__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=template&id=788a7f84 */ "../../../../nova-wizard/node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../nova-wizard/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=template&id=788a7f84");
 
 
 /***/ }),
 
-/***/ "./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css ***!
-  \*********************************************************************************/
+/***/ "../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css":
+/*!*******************************************************************************************************!*\
+  !*** ../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css ***!
+  \*******************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_ef10eebe_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Tool.vue?vue&type=style&index=0&id=ef10eebe&lang=css");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Tool_vue_vue_type_style_index_0_id_788a7f84_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css */ "../../../../nova-wizard/node_modules/style-loader/dist/cjs.js!../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/vue-loader/dist/stylePostLoader.js!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!../../../../nova-wizard/resources/js/pages/Tool.vue?vue&type=style&index=0&id=788a7f84&lang=css");
 
 
 /***/ }),
@@ -12674,42 +12680,7 @@ module.exports = Vue;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -12762,73 +12733,55 @@ module.exports = Vue;
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/js/tool": 0,
-/******/ 			"css/tool": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkwdelfuego_nova_wizard"] = self["webpackChunkwdelfuego_nova_wizard"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/tool"], () => (__webpack_require__("./resources/js/tool.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/tool"], () => (__webpack_require__("./resources/css/tool.css")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+var __webpack_exports__ = {};
+/*!****************************************************!*\
+  !*** ../../../../nova-wizard/resources/js/tool.js ***!
+  \****************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _pages_Tool__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Tool */ "../../../../nova-wizard/resources/js/pages/Tool.vue");
+
+Nova.booting(function (app, store) {
+  Nova.inertia('NovaWizard', _pages_Tool__WEBPACK_IMPORTED_MODULE_0__["default"]);
+});
+})();
+
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!******************************************************!*\
+  !*** ../../../../nova-wizard/resources/css/tool.css ***!
+  \******************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../../../nova-wizard/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_tool_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./tool.css */ "../../../../nova-wizard/node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../nova-wizard/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../nova-wizard/resources/css/tool.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_tool_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_tool_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+})();
+
 /******/ })()
 ;
